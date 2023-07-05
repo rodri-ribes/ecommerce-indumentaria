@@ -1,0 +1,176 @@
+@import '../../style/style.scss';
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+    .container__data{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 200px;
+        background-color: $color-secondary;
+        margin: 0 auto;
+
+        .container__data__product{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 40%;
+
+            img{
+                width: 90px;
+                height: 90px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 1px solid black;
+            }
+
+            .container__data__product__content{
+                display: flex;
+                flex-direction: column;
+                width: 60%;
+                margin-left: 1rem;
+
+                h3{
+                    color: green;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    margin-bottom: .5rem; 
+                }
+
+                p{
+                    @include styleTitle;
+                }
+            }
+        }
+
+        .container__data__info{
+            display: flex;
+            flex-direction: row;
+            border-left: 1px solid gray;
+            width: 50%;
+            padding: 2rem;
+
+            .container__data__info__content{
+                display: flex;
+                flex-direction: column;
+                width: 40%;
+                p{
+                    color: $color-font-secondary;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+    
+                b{
+                    color: $color-font-main;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    margin-top: 0.5rem;
+                }
+            }
+
+            .container__data__info__imgs{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 25%;
+                position: relative;
+
+                img{
+                    width: 60px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    position: absolute;
+                }
+
+                p{
+                    border: 1px solid black;
+                    background-color: white;
+                    width: 50px;
+                    padding: 16px 10px;
+                    text-align: center;
+                    border-radius: 50%;
+                    position: absolute;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+            }
+            .container__data__buttons{
+                width: 25%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                button{
+                    @include buttonStyle;
+                    width: 200px;
+                    padding: 15px 10px;
+                }
+            }
+        }
+
+    }
+
+    .container__recommendations{
+        display: flex;
+        width: 1300px;
+        margin-top: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 968px){
+    .container{
+        width: 100%;
+        
+        .container__data{
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            margin: 2rem auto;
+            .container__data__product{
+                width: 100%;
+                height: auto;
+                justify-content: center;
+                margin: 1rem auto;
+                img{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            .container__data__info{
+                flex-direction: column;
+                border: none;
+                width: 100%;
+
+                .container__data__info__content{
+                    width: 100%;
+                }
+
+                .container__data__info__imgs{
+                    width: 70%;
+                    height: 100px;
+                    justify-content: center;
+                }
+
+                .container__data__buttons{
+                    width: 50%;
+                    align-self: flex-end;
+                    button{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .container__recommendations{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}

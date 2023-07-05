@@ -1,0 +1,171 @@
+@import '../../style/style.scss';
+
+
+.container__product{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: $color-secondary;
+    margin-bottom: 1rem;
+    img{
+        width: 10%;
+    }
+
+
+    .container__product__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 70%;
+        margin-left: 1rem;
+
+        h3{
+            @include styleTitle;
+        }
+
+        p{
+            margin-top: 0.5rem ;
+            @include styleDescription;
+        }
+
+        .container__product__content__selectores{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 1rem;
+            width: 100%;
+            position: relative;
+
+            .container__product__content__selectores__group{
+                display: flex;
+                flex-direction: column;
+                width: 30%;
+                margin-left: 2rem;
+
+                p{
+                    font-family: 'Nunito', sans-serif;
+                }
+
+                label{
+                    margin-bottom: 0.5rem;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    color: $color-font-main
+                }
+                select, input{
+                    @include inputStyle;
+                }
+
+                .container__product__content__selectores__group__cant{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    b{
+                        width: 50%;
+                        // margin-left: 1rem;   
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+                    }
+                    input{
+                        width: 40%;
+                    }
+                }
+            }
+
+            .container__product__content__selectores__subTotal{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: auto;
+                position: absolute;
+                top: 0;
+                right: -200px;
+                p{
+                    font-size: 1.2rem;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    b{
+                        color: $color-font-secondary;
+                        font-family: monospace;
+                    }
+                }
+            }
+        }
+    }
+
+    .container__product__price{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+
+        .container__product__price_price{
+            @include stylePrice;
+            font-size: 1.5rem;
+        }
+        .container__product__price__oferta{
+            display: flex;
+            align-items: center;
+
+            .container__product__price__oferta_price{
+                color: $color-font-secondary;
+                font-family: monospace;
+                font-size: 1.5rem;
+
+            }
+
+            .container__product__price__oferta_oferta{
+                margin-left: 1rem;
+                background-color: red;
+                color: white;
+                padding: 5px;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 968px){
+    .container__product{
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        img{
+            width: 50%;
+            align-self: center;
+        }
+
+        .container__product__content{
+            width: 100%;
+            margin-top: 1rem;
+
+            .container__product__content__selectores{
+                width: 100%;
+                flex-direction: column;
+                .container__product__content__selectores__group{
+                    width: 100%;
+                    margin-left: 0;
+                    margin-bottom: 1rem;
+                }
+
+                .container__product__content__selectores__subTotal{
+                    position: relative;
+                    right: 0;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        .container__product__price{
+            width: 100%;
+            .container__product__price__oferta{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

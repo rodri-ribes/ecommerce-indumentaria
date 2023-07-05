@@ -1,0 +1,249 @@
+@import '../../../../style/style.scss';
+
+
+.container__customer{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: $color-secondary;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    .container__customer__date{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p{
+            color: $color-font-secondary;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        button{
+            @include buttonStyle;
+            width: 100px;
+        }
+    }
+
+    .container__customer__enlarge{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 1rem auto;
+
+        h3{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: $color-font-main;
+            font-size: 1.3rem;
+        }
+
+        svg{
+            color: white;
+            margin-left: 1rem;
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+    }
+
+    .container__customer__status{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+
+        p, b{
+            color: $color-font-secondary;
+            font-family: "Nunito Sans", sans-serif;
+        }
+
+        b{
+            display: flex;
+            align-items: center;
+            width: 60%;
+            p{
+                margin-left: 0.5rem;
+                font-weight: 200;
+            }
+        }
+
+        button{
+            @include buttonStyle;
+            width: 35%;
+        }
+
+    }
+
+
+    .container__customer__products{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+
+        h3{
+            color: $color-font-main;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .container__customer__products__product{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            margin-bottom: 1rem;
+            background-color: $color-secondary;
+            padding: 1rem;
+
+            img{
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+    
+            .container__customer__products__product__data{
+                display: flex;
+                flex-direction: column;
+                margin-left: 1rem;
+                width: 100%;
+
+                h3{
+                    color: $color-font-main;
+                    font-family: "Nunito", sans-serif;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
+    
+                p{
+                    color: $color-font-secondary;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-size: .9rem;
+                }
+
+                .container__customer__products__product__data__selection{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    width: 100%;
+                    margin-top: 0.5rem;
+                    .container__customer__products__product__data__selection__group{
+                        display: flex;
+                        align-items: center;
+                        width: 30%;
+
+                        b, p{
+                            color: $color-font-secondary;
+                            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            font-size: 1rem;
+                            word-wrap: break-word;
+                        }
+
+                        p{
+                            margin-left: 0.5rem;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .container__customer__products__readMore{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+                margin-left: 0.5rem;
+                color: $color-font-secondary;
+                cursor: pointer;
+            }
+
+            svg{
+                margin-left: 0.5rem;
+                color: $color-font-secondary;
+                cursor: pointer;
+            }
+        }
+
+        .container__customer__products__total{
+            display: flex;
+            align-items: center;
+            margin: 1rem;
+            h2{
+                font-family: monospace;
+                color: green;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+                margin-left: 0.5rem;
+                color: $color-font-secondary;
+            }
+        }
+    }
+
+
+    .container__customer__content{
+        display: flex;
+        width: 100%;
+
+        .container__customer__content__shipment{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            h3{
+                color: $color-font-main;
+                font-family: "Open Sans", sans-serif;
+            }
+
+            .container__customer__content__shipment__home{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                .container__customer__content__shipment__home__group{
+                    display: flex;
+                    align-items: center;
+                    width: auto;
+                    margin-top: 0.5rem;
+                    b, p{
+                        color: $color-font-secondary;
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        font-size: 1rem;
+                        word-wrap: break-word;
+                    }
+
+                    p{
+                        margin-left: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 968px){
+    .container__customer{
+        width: 100%;
+
+        .container__customer__products{
+            width: 100%;
+            .container__customer__products__product{
+                width: 100%;
+                .container__customer__products__product__data__selection{
+                    flex-direction: column;
+                    width: 100%;
+
+                    .container__customer__products__product__data__selection__group{
+                        align-self: flex-start;
+                    }
+                }
+            }
+        }
+    }
+}

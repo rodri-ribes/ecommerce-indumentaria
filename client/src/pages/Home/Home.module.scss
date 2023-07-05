@@ -1,0 +1,73 @@
+@import '../../style/style.scss';
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .container__filterAndProducts{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+        width: 1300px;
+        margin: 3rem auto;
+
+        .container__filterAndProducts__panel{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 20%;
+            height: 300px;
+            // outline: 1px solid black;
+    
+            button{
+                @include buttonStyle;
+                margin-bottom: 1rem;
+                width: 180px;
+                align-self: flex-end;
+            }
+        }
+        
+        .container__filterAndProducts__cards{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-content: center;
+            // outline: 1px solid black;
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 968px){
+    .container{
+        width: 100%;
+        height: auto;
+
+        .container__filterAndProducts{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 95%;
+            height: auto;
+            margin: 1rem auto;
+
+            .container__filterAndProducts__panel{
+                width: 300px;
+                height: auto;
+                margin-bottom: 1rem;
+
+            }
+
+            .container__filterAndProducts__cards{
+                flex-direction: column;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+}

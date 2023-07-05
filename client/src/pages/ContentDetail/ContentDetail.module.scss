@@ -1,0 +1,302 @@
+@import '../../style/style.scss';
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 1300px;
+    margin: 2rem auto;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .container__product{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+        // outline: 1px solid red;
+        height: auto;
+        position: relative;
+        width: 100%;
+
+        .container__product__content{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 70%;
+            height: auto;
+            
+            .container__product__content_content{
+                display: flex;
+                flex-direction: column;
+                background-color: $color-secondary;
+                padding: 1rem;
+                margin-top: 1rem;
+                width: 100%;
+                h3{
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    color: white;
+                    margin-bottom: 0.5rem;
+                }
+                p{
+                    @include styleDescription;
+                }
+            }
+
+            .container__product__content__image{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin: 0 auto;
+                background-color: $color-secondary;
+                padding: 1rem;
+    
+                .container__product__content__image__list{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    width: 20%;
+                    height: 550px;
+                    padding: 1rem;
+                    overflow-y: auto;
+                    &::-webkit-scrollbar{
+                        width: 5px;
+                    }
+                    &::-webkit-scrollbar-track{
+                        background: white;
+                    }
+                    &::-webkit-scrollbar-thumb{
+                        background: gray;
+                        border-radius: 2px;
+                        
+                    }
+                    img{
+                        width: 100%;
+    
+                        margin-bottom: 1rem;
+                        cursor: pointer;
+                    }
+                }
+    
+                .container__product__content__image__img{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width:80%;
+    
+                    img{
+                        width: 80%;
+                        height: 90%;
+                    }
+                }
+
+            }
+            
+
+            .container__reviews{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+        
+                h3{
+                    color: gray;
+                    margin-top: 1rem;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    
+                }
+            }
+        }
+
+            .container__product__panel{
+                display: flex;
+                flex-direction: column;
+                width: 28%;
+                height: auto;
+                position: sticky;
+                // right: 0;
+                top: 5rem;
+                z-index: 10;
+                padding: 1rem;
+                background-color: $color-secondary;
+        
+                .container__product__panel__group{
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    width: 100%;
+                    margin-bottom: 1.5rem;
+        
+                    .container__product__panel__group__sell{
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: $color-font-secondary;
+                    }
+        
+                    select{
+                        @include inputStyle;
+                        margin-top: 0.5rem;
+                    }
+
+                    label{
+                        color: $color-font-main;
+                        font-family: "Nunito", sans-serif;
+                    }
+        
+                    .container__product__panel__group__selectCant{
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+        
+                        input{
+                            @include inputStyle;
+                            margin-left: 0.5rem;
+                            width: 80px;
+                        }
+        
+                        b{
+                            margin-left: 1rem;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-weight: 400;
+                        }
+                    }
+                    
+                    .container__product__panel__group__shipment{
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        color: green;
+                        font-size: 1.2rem;
+
+                        p{
+                            color: $color-font-main;
+                            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            b{
+                                color: green;
+                            }
+                        }
+
+                        svg{
+                            margin-right: 1rem;
+                            font-size: 1.2rem;
+                        }
+                    }
+        
+                    .button{
+                        border: none;
+                        padding: 10px 15px;
+                        font-family: 'Varela Round', sans-serif;
+                        font-size: 1.2rem;
+                        margin-bottom: 1rem;
+                        outline: none;
+                        border-radius: 3px;
+                        cursor: pointer;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: all 500ms;
+                    }
+        
+                    .comprarAhorra{
+                        background-color: #3483FA;
+                        color: white;
+
+                        &:hover{
+                            background-color: #0066ff;
+                        }
+                    }
+        
+                    .agregarAlCarrito{
+                        background-color: #E3EDFB;
+                        color: #3483FA;
+
+                        &:hover{
+                            background-color: #ffffff;
+                            color: #0066ff;
+
+                        }
+                    }
+                }
+        
+                .container__product__panel__data{
+                    display: flex;
+                    flex-direction: column;
+        
+                    h2{
+                        @include styleTitle;
+                    }
+        
+                    p{
+                        color: gray;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+        
+                    .container__product__panel__data__price{
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.4rem;
+                        margin: 1rem 0 2rem 0;
+                        
+                        b{
+                            @include stylePrice;
+                        }
+                        p{
+                            margin: 0 0.5rem;
+                            background-color: red;
+                            padding: 5px 10px;
+                            color: white;
+                            font-size: 1rem;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    
+}
+
+
+@media screen and (max-width: 968px){
+    .container{
+        flex-direction: column;
+        width: 95%;
+        .container__product{
+            flex-direction: column-reverse;
+            width: 100%;
+            .container__product__content{
+                width: 100%;
+
+                .container__product__content__image{
+                    flex-direction: column;
+                    width: 100%;
+
+                    .container__product__content__image__list{
+                        flex-direction: row;
+                        height: auto;
+                        width: 100%;
+                        margin-bottom: 1rem;
+
+                        @include styleScroll;
+                        img{
+                            width: 100px;
+                            margin-right: 1rem;
+                        }
+                    }
+
+                    .container__product__content__image__img{
+                        width: 100%;
+                    }
+                }
+            }
+
+            .container__product__panel{
+                width: 100%;
+                margin: 1rem auto;
+                position: static;
+
+            }
+        }
+    }
+}

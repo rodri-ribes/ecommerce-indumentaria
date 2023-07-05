@@ -1,0 +1,94 @@
+@import '../../../style/style.scss';
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .container__product{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: $color-secondary;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        position: relative;
+        svg{
+            color: $color-font-main;
+            margin-bottom: 1rem;
+            align-self: flex-end;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .container__product__data{
+            display: flex;
+            width: 95%;
+
+            img{
+                width: 100px;
+            }
+            
+            .container__product__data__title{
+                display: flex;
+                flex-direction: column;
+                margin-left: 1rem;
+    
+                h3{
+                    color: $color-font-main;
+                    font-family: "Nunito", sans-serif;
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    word-break: break-all;
+                }
+    
+                p{
+                    color: $color-font-secondary;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    word-break: break-all;
+
+                }
+            }
+        }
+
+       
+
+    }
+
+    .container__pagination{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 968px){
+    .container{
+        width: 100%;
+        .container__product{
+            width: 100%;
+
+
+            .container__product__data{
+                width: 100%;
+                img{
+                    width: 100px;
+                    height: 100px;
+                    align-self: center;
+                }
+
+                .container__product__data__title{
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}

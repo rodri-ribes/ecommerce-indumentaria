@@ -1,0 +1,37 @@
+@import '../../style/style.scss';
+
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    
+    button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        svg{
+            color: $color-font-main;
+            font-size: 1.5rem;
+        }
+
+        &:focus{
+            animation-name: animation;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
+    }
+
+    @keyframes animation {
+        0%{
+            transform: rotate(0);
+        }
+        50%{
+            transform: rotate(180deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+}

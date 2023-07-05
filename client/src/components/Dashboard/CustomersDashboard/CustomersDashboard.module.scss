@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+
+    .container__customers{
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+}

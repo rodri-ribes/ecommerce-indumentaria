@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@300&display=swap');
+
+.containerForm{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 800px;
+    height: 500px;
+    margin: 2rem auto;
+    background-color: white;
+    border-radius: 2px;
+    img{
+        width: 40%;
+        height: 100%;
+        border-radius: 2px 0 0 2px;
+    }
+
+    .Container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 60%;
+        overflow-y: auto;
+        height: 500px;
+        padding: 1rem;
+        
+        .Container__Div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            width: 80%;
+            margin: 1rem auto;
+            .Container__Div_Input{
+                padding: 5px 10px;
+                font-family: lucida sans;
+                outline: none;
+                background-color: transparent;
+                border-radius: 3px;
+                border: none;
+                border-bottom: 1px solid black;
+                &::placeholder{
+                    font-family: 'Darker Grotesque', sans-serif;
+                    font-size: 1.2rem;
+                    color: black;
+                }
+            }
+            .Container__Div_Error{
+                width: 100%;
+                p {
+                    padding: 3px 5px;
+                    font-family: 'Livvic', sans-serif;
+                    color: red;
+                    font-weight: 600;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        
+        .Container__Button{
+            padding: 10px;
+            cursor: pointer;
+            background-color: rgb(173, 3, 74);
+            color: white;
+            font-size: 1rem;
+            border-radius: 2px;
+            transition: all 1s;
+            width: 80%;
+            margin: 1rem auto;
+            border: none;
+            &:hover{
+                background-color: rgb(127, 3, 55);
+                color: white;
+                transform: translateY(-2px);
+            }
+            
+            &:active{
+                transform: scale(1.05);
+            }
+        }
+
+        .message{
+            font-size: 1rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            width: 80%;
+            margin: 1rem auto;
+            font-weight: 400;
+            text-align: center;
+        }
+        
+        .message_success{
+            color: green;
+        }
+
+        .message_error{
+            color: red;
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 968px){
+    .containerForm{
+        flex-direction: column;
+        width: 95%;
+        img{
+            display: none;
+        }
+        .Container{
+            width: 100%;
+            flex-direction: column;
+            .Container__Div{
+                width: 100%;
+
+            }
+        }
+    }
+}

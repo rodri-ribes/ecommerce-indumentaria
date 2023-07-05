@@ -1,0 +1,21 @@
+@import './style/style.scss';
+
+body{
+    background-color: $color-principal;
+
+}
+
+.container{
+    min-height: calc(100vh - 13.14vh - 50px );
+    position: relative;
+    margin: auto;
+
+}
+
+
+
+@media screen and (max-width: 968px){
+    .container{
+        min-height: calc(100vh - 13.14vh - 50px);
+    }
+}

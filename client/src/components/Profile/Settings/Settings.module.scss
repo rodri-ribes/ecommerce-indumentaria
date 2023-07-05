@@ -1,0 +1,203 @@
+@import "../../../style/style.scss";
+
+.container{
+    display: flex;    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+
+    .container__settings{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+        min-height: 500px;
+        height: auto;
+        position: relative;
+        background-color: $color-secondary;
+        padding: 1rem;
+        width: 100%;
+
+        .message__error{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0.5rem 0;
+
+            p, svg{
+                color: red;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            svg{
+                margin-left: 1rem;
+            }
+            
+        }
+    
+        p{
+            display: flex;
+            align-items: center;
+            svg{
+                margin-left: 0.5rem;
+                cursor: pointer;
+            }
+        }
+    
+        input{
+            @include inputStyle;
+            margin-left: 1rem;
+            width: 200px;
+        }
+    
+        .container__edit{
+            position: absolute;
+            align-self: flex-end;
+            svg{
+                color: $color-font-main;
+                cursor: pointer;
+                font-size: 1.5rem;
+            }
+        }
+    
+        .container__oneSection{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+    
+            .container__oneSection__image{
+                position: relative;            
+                
+                .container__oneSection_img{
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    margin-right: 1rem;
+                }
+    
+                .container__oneSection__image__upload{
+                    position: absolute;
+                    bottom: 0;
+                    right: 20px;
+                    width: 20px;
+                    svg{
+                        background-color: white;
+                        color: black;
+                        border-radius: 50%;
+                        font-size: 1.5rem;
+                        padding: 2px;
+                        cursor: pointer;
+                    }
+    
+                    input{
+                        position: absolute;
+                        width: 20px;
+                        right: 0;
+                        opacity: 0;
+                        cursor: pointer;
+    
+                    }
+                }
+            }
+           
+    
+            .container__oneSection__data{
+                display: flex;
+                flex-direction: column;
+    
+                .container__oneSection__data__inputs{
+                    display: flex;
+                }
+    
+                .container__oneSection__data_name{
+                    margin-right: 1rem;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-size: 1.5rem;
+                    color: $color-font-main;
+                }
+            }
+        }
+    
+        .container__twoSection{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 1rem;
+    
+            h3{
+                color: $color-font-main;
+                font-family: "Nunito", sans-serif;
+            }
+    
+            .container__twoSection__group{
+                display: flex;
+                align-items: center;
+                margin-top: 0.5rem;
+    
+                b, p{
+                    color: $color-font-secondary;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+    
+                p{
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+    
+    
+        .container__buttons{
+            align-self: flex-end;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 1rem;
+    
+            button{
+                @include buttonStyle;
+                width: 250px;
+                align-self: flex-end;
+                margin-left: 0.5rem;
+            }
+    
+            .container__buttons_cancel{
+                background-color: rgb(255, 66, 66);
+                &:hover{
+                    background-color: red;
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 968px){
+    .container{
+        width: 100%;
+        .container__settings{
+            width: 100%;
+
+            .container__oneSection__data{
+                width: 100%;
+                .container__oneSection__data__inputs{
+                    flex-direction: column;
+                    input:nth-child(1){
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+
+            .container__buttons{
+                justify-content: space-around;
+                button{
+                    width: 48%;
+                    font-size: .7rem;
+                }
+            }
+        }
+    }
+}

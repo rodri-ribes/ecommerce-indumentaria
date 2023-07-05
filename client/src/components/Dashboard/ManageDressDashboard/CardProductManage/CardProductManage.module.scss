@@ -1,0 +1,229 @@
+@import '../../../../style/style.scss';
+
+
+.container__product{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: $color-secondary;
+
+
+    .container__product_image{
+        max-width: 20%;
+        min-width: 20%;
+        img{
+            width: 100%;
+        }
+
+    }
+
+    .container__product_content{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 200px;
+        margin-left: 1rem;
+        color: black;
+        justify-content: space-between;
+        .container__product_content_data{
+            display: flex;
+            flex-direction: column;
+            h3{
+                @include styleTitle;
+            }
+
+            h4{
+                @include styleDescription;
+            }
+
+            .container__product_content_data_price{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                p{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 0.5rem;
+                    font-weight: 600;
+                    color: green;
+                    font-family:monospace;
+                    font-size: 1.2rem;
+                    // @include stylePrice;
+                    .oferta{
+                        text-decoration: line-through;
+                    }
+                }
+
+                h4{
+                    margin-left: 1rem;
+                    color: green;
+                    font-weight: 600;
+                    font-family: monospace;
+                    font-size: 1.2rem;
+                    b{
+                        background-color: red;
+                        color: white;
+                        padding: 5px 10px;
+                        margin-right: 1rem;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+
+            input{
+                @include inputStyle;
+                width: 20%;
+                margin-top: 1rem;
+                &:hover{
+                    box-shadow: none;
+                    transform: none;
+                }
+            }
+
+           
+            .container__product_content_data_price_discount{
+                display: flex;
+                align-items: center;
+                margin-top: 1rem;
+                p{
+                    margin-left: 1rem;
+                    font-weight: 600;
+                    color: green;
+                    font-family:monospace;
+                    font-size: 1.2rem;
+                }
+                select{
+                    @include inputStyle;
+                    width: 30%;
+
+                    &:hover{
+                        box-shadow: none;
+                        transform: none;
+                    }
+                }
+            }
+        }
+
+        .container__product_content_buttons{
+            display: flex;
+            width: 100%;
+            align-items: center;
+
+            .container__product_content_buttons_btn{
+                @include buttonStyle;
+                text-decoration: none;
+                margin-left: 1rem;
+                width: auto;
+                svg{
+                    margin-left: .5rem;
+                    font-size: 1rem;
+                }
+            }
+
+            .errorButton{
+                background-color: red;
+                color: white;
+                svg{
+                    color: white;
+                }
+
+                &:hover{
+                    background-color: red;
+                    box-shadow: 0 0 5px red;
+                }
+            }
+        }
+    }
+
+    .container__product_show{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 10%;
+        svg{
+            font-size: 2rem;
+            cursor: pointer;
+            color: $color-font-secondary;
+        }
+    }
+}
+
+@media screen and (max-width: 968px){
+    .container__product{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        position: relative;
+        .container__product_image{
+            max-width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+
+        .container__product_content{
+            margin-left: 0;
+            height: auto;
+            width: 100%;
+            align-self: flex-start;
+
+           
+
+            .container__product_content_data{
+                width: 100%;
+
+                input{
+                    width: 100%;
+                }
+                .container__product_content_data_price{
+                    flex-direction: column;
+                    p{
+                        align-self: flex-start;
+
+                    }
+
+                    h4{
+                        align-self: flex-start;
+                        margin-top: .5rem;
+                    }
+                }
+            }
+
+            .container__product_content_buttons{
+                flex-direction: column;
+                width: 90%;
+                margin-top: 1rem;
+                .container__product_content_buttons_btn{
+                    width: 100%;
+                    align-self: flex-start;
+                    margin-bottom: 1rem ;
+                }
+            }
+        }
+
+        .container__product_show{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.564);
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            z-index: 20;
+            box-shadow: 0 0 10px black;
+            svg{
+                font-size: 2rem;
+                color: black;
+            }
+        }
+    }
+}

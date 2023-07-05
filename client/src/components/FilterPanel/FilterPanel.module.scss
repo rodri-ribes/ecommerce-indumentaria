@@ -1,0 +1,84 @@
+@import '../../style/style.scss';
+
+@keyframes showAnimation{
+    0%{
+        transform: translateX(-2rem);
+    }
+    50%{
+        transform: translateX(1rem);
+    }
+    100%{
+        transform: translateX(0rem);
+    }
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    background-color: $color-secondary;
+    border-left: 4px solid $color-three;
+    animation-name: showAnimation;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    transition: all 1s ease-in;
+    
+    .container__group{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        label{
+            font-family: 'Noto Sans Display', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: .5rem;
+            color: gray;
+        }
+
+        select, input{
+            @include inputStyle;
+            color: white;
+            &::placeholder{
+                color: white;
+            }
+        }
+
+
+        .container__group__rangeprice{
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+            input{
+                width: 45%;
+            }
+        }
+
+        .container__group__oferta{
+            display: flex;
+
+            input{
+                width: 10%;
+            }
+            p{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin-left: .5rem;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 968px){
+    .container{
+        width: 300px;
+        height: auto;
+
+        .container__group{
+            width: 100%;
+        }
+
+    }
+}

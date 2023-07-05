@@ -1,0 +1,47 @@
+@import '../../style/style.scss';
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 350px;
+    width: auto;
+    background-color: white;
+    border-left: 5px solid $color-secondary;
+    box-shadow: 0 0 5px rgb(154, 154, 154);
+    border-radius: 3px;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 2rem;
+    left: 3rem;
+    z-index: 100;
+
+    .container__data{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 90%;
+
+        p{
+            align-self: flex-start;
+            color: black;
+            font-weight: 600;
+            font-size: 0.9rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }
+
+        h3{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0.5rem;
+            color: black;
+            align-self: flex-start;
+        }
+    }
+    svg{
+        font-size: 2rem;
+        width: 10%;
+        align-self: center;
+
+    }
+}

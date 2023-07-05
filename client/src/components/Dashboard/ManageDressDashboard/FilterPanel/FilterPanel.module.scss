@@ -1,0 +1,74 @@
+@import '../../../../style/style.scss';
+
+
+
+.container__filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1rem 1rem 2rem 1rem;
+    background-color: $color-secondary;
+
+    h3{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: white;
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    .container__filters__inputs{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+
+        .container__filters__inputs_group{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 20%;
+
+            label{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1rem;
+                margin-bottom: .5rem;
+                color: white;
+            }
+
+            select, input{
+                @include inputStyle;
+            }
+
+            .container__filters__inputs_group__price{
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+
+                input{
+                    width: 48%;
+                }
+            }
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 968px){
+    .container__filters{
+        width: 100%;
+        .container__filters__inputs{
+            flex-direction: column;
+            width: 100%;
+            .container__filters__inputs_group{
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+    } 
+}

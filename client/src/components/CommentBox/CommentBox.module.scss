@@ -1,0 +1,110 @@
+@import '../../style/style.scss';
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    float: 2;
+    h2{
+        margin: auto 0;
+        color: gray;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        .link{
+            @include styleVinculo;
+        }
+    }
+
+    .container__box{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        background-color: $color-secondary;
+        padding: 1rem;
+
+        img{
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        .container__box__content{
+            display: flex;
+            flex-direction: column;
+            margin-left: 1rem;
+            width: 100%;
+            h3{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: white;
+                margin-bottom: 0.5rem;
+            }
+            .container__box__content__inputs{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                textarea{
+                    @include inputStyle;
+                    width: 80%;
+                    resize: none;
+                    height: 50px;
+                 
+                }
+                button{
+                    @include buttonStyle;
+                    width: 15%;
+                    height: 50px;
+                    font-size: 1.2rem;
+                    &:disabled{
+                        background-color: $color-secondary;
+                        cursor: progress;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .container__comments{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+
+        h3{
+            color: gray;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .container__comments__list{
+            display: flex;
+            width: 100%;
+            flex-direction: column-reverse;
+        }
+    }
+
+}
+
+@media screen and (max-width: 968px){
+    .container{
+        width: 100%;
+        margin: 1rem auto;
+
+        .container__box{
+            .container__box__content{
+                .container__box__content__inputs{
+                    textarea{
+                        width: 65%;
+                    }
+                    button{
+                        width: 30%;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

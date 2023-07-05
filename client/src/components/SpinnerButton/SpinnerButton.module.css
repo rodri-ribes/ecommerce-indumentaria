@@ -1,0 +1,58 @@
+.container {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container div {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.container div:nth-child(1) {
+  left: 8px;
+  animation: container1 0.6s infinite;
+}
+.container div:nth-child(2) {
+  left: 8px;
+  animation: container2 0.6s infinite;
+}
+.container div:nth-child(3) {
+  left: 32px;
+  animation: container2 0.6s infinite;
+}
+.container div:nth-child(4) {
+  left: 56px;
+  animation: container3 0.6s infinite;
+}
+@keyframes container1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes container3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes container2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
