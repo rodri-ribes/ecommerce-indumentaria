@@ -10,9 +10,9 @@ class PaymentService {
             // },
             items: req.body.cart,
             back_urls: {
-                failure: "http://localhost:3000/afterpaying/failure",
-                pending: "http://localhost:3000/afterpaying/pending",
-                success: "http://localhost:3000/afterpaying/success"
+                failure: "https://mateek.vercel.app/afterpaying/failure",
+                pending: "https://mateek.vercel.app/afterpaying/pending",
+                success: "https://mateek.vercel.app/afterpaying/success"
             },
         };
 
