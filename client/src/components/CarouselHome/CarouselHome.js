@@ -42,7 +42,7 @@ export default function CarouselHome({ products, userState, dispatch, navigate }
                 autoplay={{ delay: 3000 }}
             >
                 {
-                    products && products?.map((e, i) => {
+                    products?.map((e, i) => {
 
                         return (
                             <SwiperSlide key={i}>
