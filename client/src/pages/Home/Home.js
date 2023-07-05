@@ -59,7 +59,9 @@ const Home = ({ dress, userState }) => {
 
   return (
     <div className={style.container}>
-
+  {
+      filtrado?.length > 0 ?
+      <>
       <CarouselHome products={dress} userState={userState} dispatch={dispatch} navigate={navigate} />
 
       <div className={style.container__filterAndProducts}>
@@ -72,9 +74,9 @@ const Home = ({ dress, userState }) => {
             }
           </div>
         }
-        {
-          filtrado?.length > 0 ?
-            <>
+        
+          
+           
               <div className={style.container__filterAndProducts__cards} style={showFilter ? { width: "80%" } : { width: "90%" }}>
                 {filtrado && filtrado?.filter(filterTerm2(inputsFilter))?.slice(
                   (pagina - 1) * porPagina,
@@ -102,11 +104,12 @@ const Home = ({ dress, userState }) => {
                   />
                 </div>
               }
-            </>
-            :
+        </div>
+      </>
+           :
             <Spinner />
-        }
-      </div>
+    
+  }
     </div>
   )
 }
